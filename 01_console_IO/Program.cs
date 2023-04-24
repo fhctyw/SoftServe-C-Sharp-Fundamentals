@@ -13,8 +13,14 @@ if (isSideSquareParsed && a > 0)
     Console.WriteLine($"Square area = {a * a}");
     Console.WriteLine($"Square perimeter = {4 * a}");
 }
-else if (isSideSquareParsed && a <= 0) Console.WriteLine("Your length cannot be less or equal zero");
-else Console.WriteLine("You entered wrong number");
+else if (isSideSquareParsed && a <= 0)
+{
+    Console.WriteLine("Your length cannot be less or equal zero");
+}
+else
+{
+    Console.WriteLine("You entered wrong number");
+}
 
 // Task 2
 string? name;
