@@ -88,14 +88,12 @@ internal class Program
         }
 
         // Task 3
-        int httpIntegerCode;
-        bool isCodeParsed;
+        HTTPError httpCode;
         Console.Write("Enter HTTP error code: ");
-        isCodeParsed = int.TryParse(Console.ReadLine(), out httpIntegerCode);
-        HTTPError httpCode = (HTTPError)httpIntegerCode;
+        bool isCodeParsed = Enum.TryParse<HTTPError>(Console.ReadLine(), true, out httpCode);
         if (isCodeParsed && Enum.IsDefined(httpCode))
         {
-            Console.WriteLine($"Error: {httpCode}, Code: {httpIntegerCode}");
+            Console.WriteLine($"Error: {httpCode}, Code: {(int)httpCode}");
         }
         else if (!Enum.IsDefined(httpCode))
         {

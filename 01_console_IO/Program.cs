@@ -23,11 +23,10 @@ else
 }
 
 // Task 2
-string? name;
 int age;
 Console.WriteLine("What is you name?");
-name = Console.ReadLine();
-Console.WriteLine("How old are you?");
+string? name = Console.ReadLine();
+Console.WriteLine($"How old are you, {name}?");
 bool isAgeParsed = int.TryParse(Console.ReadLine(), out age);
 if (isAgeParsed && name != null && age >= 0)
 {
