@@ -1,6 +1,5 @@
 ﻿using _02_Console_TypeSystem;
 using System.Globalization;
-using System.Security.AccessControl;
 
 internal class Program
 {

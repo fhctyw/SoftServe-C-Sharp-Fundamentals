@@ -5,9 +5,11 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Console_IO", "01_Console_IO\01_Console_IO.csproj", "{764EA6FE-B2A3-4DDF-9C12-0C5B82CE9B3F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Console_TypeSystem", "02_Console_TypeSystem\02_Console_TypeSystem.csproj", "{78FF5F67-9779-4835-90D4-B3A622FB24F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_TypeSystem", "02_Console_TypeSystem\02_TypeSystem.csproj", "{78FF5F67-9779-4835-90D4-B3A622FB24F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Console_Statements", "03_Console_Statements\03_Console_Statements.csproj", "{EC0CAB50-AAC2-4E4D-B64C-6F4F1396192B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Statements", "03_Console_Statements\03_Statements.csproj", "{EC0CAB50-AAC2-4E4D-B64C-6F4F1396192B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Classes", "04_Classes\04_Classes.csproj", "{8F3290F0-6A62-4C8E-80BA-D539228512EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EC0CAB50-AAC2-4E4D-B64C-6F4F1396192B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC0CAB50-AAC2-4E4D-B64C-6F4F1396192B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC0CAB50-AAC2-4E4D-B64C-6F4F1396192B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3290F0-6A62-4C8E-80BA-D539228512EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3290F0-6A62-4C8E-80BA-D539228512EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3290F0-6A62-4C8E-80BA-D539228512EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3290F0-6A62-4C8E-80BA-D539228512EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
