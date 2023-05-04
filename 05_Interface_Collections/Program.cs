@@ -4,13 +4,13 @@ using System.Globalization;
 internal class Program
 {
     // Practice 1
-    interface IFlable
+    interface IFlyable
     {
         void Fly();
     }
 
     // Practice 2
-    class Bird : IFlable
+    class Bird : IFlyable
     {
         string name;
         bool canFly;
@@ -30,12 +30,12 @@ internal class Program
         }
     }
     // Practice 2
-    class Plane : IFlable
+    class Plane : IFlyable
     {
         string mark;
-        int highFly;
+        double highFly;
 
-        public Plane(string mark, int highFly)
+        public Plane(string mark, double highFly)
         {
             this.mark = mark;
             this.highFly = highFly;
@@ -43,10 +43,7 @@ internal class Program
 
         public void Fly()
         {
-            if (highFly > 0)
-            {
-                Console.WriteLine($"Place {mark} is flying on {highFly}m over the ground");
-            }
+            Console.WriteLine($"Plane {mark} is flying on {highFly}m over the ground");
         }
     }
     // Task 1
@@ -120,7 +117,7 @@ internal class Program
     private static void Main(string[] args)
     {
         // Practice 3
-        /*List<IFlable> flables = new List<IFlable>
+        List<IFlyable> flyables = new List<IFlyable>
         {
             new Plane ("Boeing 747", 35000),
             new Plane ("Airbus A380", 43000),
@@ -134,9 +131,9 @@ internal class Program
             new Bird ("Parrot", true)
         };
 
-        foreach (IFlable flable in flables)
+        foreach (IFlyable flyable in flyables)
         {
-            flable.Fly();
+            flyable.Fly();
         }
 
         // Practice 4
@@ -170,7 +167,7 @@ internal class Program
         List<int> myCollSortedNumbers = new List<int>(myColl);
         myCollSortedNumbers.Sort();
         string sortedNumbers = string.Join(", ", myCollSortedNumbers);
-        Console.WriteLine($"sorted numbers: [{sortedNumbers}]");*/
+        Console.WriteLine($"sorted numbers: [{sortedNumbers}]");
 
 
         // Task 3
