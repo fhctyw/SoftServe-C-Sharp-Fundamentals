@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_Classes", "04_Classes\04
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_Interface_Collections", "05_Interface_Collections\05_Interface_Collections.csproj", "{CDB30B10-6506-4F39-B224-AE7419B2D8B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Exceptions", "06_Exceptions\06_Exceptions.csproj", "{03B59F48-DE26-4FFE-B6C8-6F0EEE1C572A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_Exceptions", "06_Exceptions\06_Exceptions.csproj", "{03B59F48-DE26-4FFE-B6C8-6F0EEE1C572A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_Files", "07_Files\07_Files.csproj", "{EB3D9767-EA3B-4B8D-B516-2750245D5DB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Files", "07_Files\07_Files.csproj", "{EB3D9767-EA3B-4B8D-B516-2750245D5DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_Abstract", "08_Abstract\08_Abstract.csproj", "{A6CC2322-71BF-446F-8E38-03D393FADFD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{EB3D9767-EA3B-4B8D-B516-2750245D5DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB3D9767-EA3B-4B8D-B516-2750245D5DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB3D9767-EA3B-4B8D-B516-2750245D5DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CC2322-71BF-446F-8E38-03D393FADFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CC2322-71BF-446F-8E38-03D393FADFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CC2322-71BF-446F-8E38-03D393FADFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CC2322-71BF-446F-8E38-03D393FADFD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

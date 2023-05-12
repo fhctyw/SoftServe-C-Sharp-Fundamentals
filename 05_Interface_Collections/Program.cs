@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Globalization;
-
-internal class Program
+﻿public class Program
 {
     // Practice 1
     interface IFlyable
@@ -47,14 +44,18 @@ internal class Program
         }
     }
     // Task 1
-    interface IDeveloper : IComparable
+    public interface IDeveloper : IComparable<IDeveloper>
     {
-        public object Tool { get; set; }
-        public void Create();
-        public void Destory();
+        object Tool { get; set; }
+        void Create();
+        void Destory();
+        int IComparable<IDeveloper>.CompareTo(IDeveloper? developer)
+        {
+            return string.Compare(Tool.ToString(), developer?.Tool.ToString());
+        }
     }
     // Task 2
-    class Programmer : IDeveloper
+    public class Programmer : IDeveloper
     {
         private string language;
         public object Tool { get => language; set => _ = language; }
@@ -63,22 +64,14 @@ internal class Program
         {
             this.language = language;
         }
-
         public void Create()
         {
             Console.WriteLine($"Programmer write program in {language} language");
         }
-
         public void Destory()
         {
             Console.WriteLine($"Programmer remove program");
         }
-
-        public int CompareTo(object? obj)
-        {
-            return string.Compare(Tool.ToString(), obj != null ? ((IDeveloper)obj).Tool.ToString() : string.Empty);
-        }
-
         public override string? ToString()
         {
             return $"Programmer with {Tool}";
@@ -94,19 +87,13 @@ internal class Program
         {
             this.tool = tool;
         }
-
         public void Create()
         {
             Console.WriteLine($"Builder built the building using {tool}");
         }
-
         public void Destory()
         {
             Console.WriteLine($"Builder destory the building");
-        }
-        public int CompareTo(object? obj)
-        {
-            return string.Compare(Tool.ToString(), obj != null ? ((IDeveloper)obj).Tool.ToString() : string.Empty);
         }
         public override string? ToString()
         {
@@ -118,18 +105,18 @@ internal class Program
     {
         // Practice 3
         List<IFlyable> flyables = new List<IFlyable>
-        {
-            new Plane ("Boeing 747", 35000),
-            new Plane ("Airbus A380", 43000),
-            new Bird ("Eagle", true),
-            new Bird ("Penguin", false),
-            new Plane ("Cessna 172", 13500),
-            new Bird ("Sparrow", true),
-            new Plane ("Concorde", 60000),
-            new Plane ("Boeing 737", 41000),
-            new Bird ("Ostrich",false),
-            new Bird ("Parrot", true)
-        };
+                {
+                    new Plane ("Boeing 747", 35000),
+                    new Plane ("Airbus A380", 43000),
+                    new Bird ("Eagle", true),
+                    new Bird ("Penguin", false),
+                    new Plane ("Cessna 172", 13500),
+                    new Bird ("Sparrow", true),
+                    new Plane ("Concorde", 60000),
+                    new Plane ("Boeing 737", 41000),
+                    new Bird ("Ostrich",false),
+                    new Bird ("Parrot", true)
+                };
 
         foreach (IFlyable flyable in flyables)
         {
