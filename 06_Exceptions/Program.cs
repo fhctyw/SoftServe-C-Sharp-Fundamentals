@@ -35,19 +35,24 @@ namespace _06_Exceptions
         static List<double> ReadNumbers(int start, int end)
         {
             List<double> numbers = new List<double>();
+            double previousNumber = double.NaN;
             for (int i = 0; i < 10; i++)
             {
                 Console.Write($"Enter {i} number = ");
                 double inputNumber = double.Parse(Console.ReadLine());
-                if (inputNumber < start || inputNumber > end)
+                if (inputNumber < start || inputNumber > end || inputNumber <= previousNumber)
                 {
-                    throw new OutOfRangeException($"Your number must be [{start};{end}]");
+                    throw new OutOfRangeException($"Your number must be [{start};{end}] and {inputNumber} great than {previousNumber}");
+                }
+                else
+                {
+                    previousNumber = inputNumber;
                 }
                 numbers.Add(inputNumber);
             }
             return numbers;
         }
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
