@@ -1,0 +1,4 @@
+Circle, Area: 58,088048164875275, Perimeter: 27,01769682087222
+Circle, Area: 12,566370614359172, Perimeter: 12,566370614359172
+Square, Area: 21,159999999999997, Perimeter: 18,4
+Square, Area: 25, Perimeter: 20

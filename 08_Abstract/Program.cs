@@ -1,10 +1,6 @@
-﻿using System.ComponentModel;
-using System.Diagnostics;
-using System.Reflection.Metadata.Ecma335;
-
-namespace _08_Abstract
+﻿namespace _08_Abstract
 {
-    internal static class Program
+    public class Program
     {
         // Practice 1
         class Person
@@ -105,7 +101,7 @@ namespace _08_Abstract
             return employees;
         }
         // Task 1
-        abstract class Shape : IComparable<Shape>
+        public abstract class Shape : IComparable<Shape>
         {
             public string Name { get; }
             protected Shape(string name)
@@ -118,8 +114,12 @@ namespace _08_Abstract
             {
                 return Area().CompareTo(other?.Area());
             }
+            public override string ToString()
+            {
+                return $"{Name}, Area: {Area()}, Perimeter: {Perimeter()}";
+            }
         }
-        class Circle : Shape
+        public class Circle : Shape
         {
             private double radius;
             public Circle(double radius) : base("Circle")
@@ -129,7 +129,7 @@ namespace _08_Abstract
             public override double Area() => Math.PI * radius * radius;
             public override double Perimeter() => 2 * Math.PI * radius;
         }
-        class Square : Shape
+        public class Square : Shape
         {
             private double side;
             public Square(double side) : base("Square")

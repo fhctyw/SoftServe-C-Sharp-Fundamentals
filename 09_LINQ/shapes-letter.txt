@@ -1,0 +1,3 @@
+Square, Area: 21,159999999999997, Perimeter: 18,4
+Square, Area: 25, Perimeter: 20
+Square, Area: 1963,3761000000002, Perimeter: 177,24
