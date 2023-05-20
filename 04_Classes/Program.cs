@@ -1,66 +1,61 @@
 ﻿using System.Drawing;
 using System.Globalization;
 
-internal class Program
+namespace _04_Classes;
+public static class Program
 {
     // Practice 1
-    class Car
+    [Serializable]
+    public class Car
     {
         public const string CompanyName = "Toyota";
-        private string? name;
-        private decimal price;
-        private Color color;
-        public Color Color
-        {
-            get => color;
-            set => color = value;
-        }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public Color Color { get; set; }
         public Car(string name, Color color, decimal price)
         {
-            this.name = name;
+            Name = name;
             Color = color;
-            this.price = price;
+            Price = price;
         }
         public Car()
         {
-            name = null;
-            Color = Color.Empty;
-            price = decimal.MinValue;
+
         }
         public void Input()
         {
             Console.Write("Enter car name: ");
-            name = Console.ReadLine();
+            Name = Console.ReadLine();
             Console.Write("Enter car color(argb, hex format): ");
             string? numberColor = Console.ReadLine();
             Color = numberColor == null ? Color.White : Color.FromArgb(int.Parse(numberColor, NumberStyles.HexNumber));
             Console.Write("Enter price: ");
-            price = decimal.Parse(Console.ReadLine() ?? "10000");
+            Price = decimal.Parse(Console.ReadLine() ?? "10000");
         }
         public void Print()
         {
             Console.WriteLine($"Company Name = {CompanyName}");
-            Console.WriteLine($"Car name: {name}");
+            Console.WriteLine($"Car name: {Name}");
             Console.WriteLine($"Car color: {Color.Name}, #{Color.ToArgb():X}");
-            Console.WriteLine($"Car price: {price:N0}$");
+            Console.WriteLine($"Car price: {Price:N0}$");
         }
         public void ChangePrice(double x)
         {
-            price *= 1 + (decimal)x / 100;
+            Price *= 1 + (decimal)x / 100;
         }
         public override bool Equals(object? obj) => obj is Car car
-                                                    && name == car.name
-                                                    && price == car.price
+                                                    && Name == car.Name
+                                                    && Price == car.Price
                                                     && Color.Equals(car.Color);
-        public override int GetHashCode() => HashCode.Combine(name, price, Color);
+        public override int GetHashCode() => HashCode.Combine(Name, Price, Color);
         // Practice 5
         public static bool operator ==(Car left, Car right) => left.Equals(right);
         public static bool operator !=(Car left, Car right) => !(left == right);
         // Practice 6
-        public override string? ToString() => $"{name}, {Color.Name}, {price:N0}$";
+        public override string? ToString() => $"{Name}, {Color.Name}, {Price:N0}$";
     }
 
-    class Person
+    public class Person
     {
         private string? name;
         private DateTime birthYear;

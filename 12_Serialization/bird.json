@@ -1,0 +1,15 @@
+{
+  "Name": "Corolla",
+  "Price": 20000,
+  "Color": {
+    "R": 192,
+    "G": 192,
+    "B": 192,
+    "A": 255,
+    "IsKnownColor": true,
+    "IsEmpty": false,
+    "IsNamedColor": true,
+    "IsSystemColor": false,
+    "Name": "Silver"
+  }
+}
