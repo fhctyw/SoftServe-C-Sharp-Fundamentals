@@ -1,9 +1,9 @@
 ﻿namespace _08_Abstract
 {
-    public class Program
+    public static class Program
     {
         // Practice 1
-        class Person
+        public class Person
         {
             protected string name;
             public string Name => name;
@@ -17,7 +17,7 @@
             }
             public override string ToString() => name;
         }
-        class Staff : Person
+        public class Staff : Person
         {
             private int salary;
             public int Salary => salary;
@@ -32,7 +32,7 @@
                 Console.WriteLine($"Salary: {salary}$");
             }
         }
-        class Student : Person
+        public class Student : Person
         {
             private string groupName;
 
@@ -47,7 +47,7 @@
             }
         }
         // Practice 2 
-        class Teacher : Staff
+        public class Teacher : Staff
         {
             private string subject;
 
@@ -62,7 +62,7 @@
                 Console.WriteLine($"Subject: {subject}");
             }
         }
-        class Developer : Staff
+        public class Developer : Staff
         {
             private string level;
 
